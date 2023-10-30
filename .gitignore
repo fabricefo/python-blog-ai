@@ -1,0 +1,10 @@
+.env
+__pycache__/
+utils/__pycache__/
+schemas/__pycache__/
+.DS_Store
+./csvs/.DS_Store
+temp.py
+test_templates.py
+utils/accounts.txt
+userdata/*
