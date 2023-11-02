@@ -4,4 +4,4 @@ This is an autoblogger that uses the ChatGPT API and Stable Diffusion API to cre
 # Setup
 pip install pandas
 pip install python-dotenv
-pip install openai
+pip install openai (or pip install openai --upgrade)
