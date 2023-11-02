@@ -88,13 +88,14 @@ for index, row in enumerate(tqdm(rows, desc='Generating blog posts')):
     ]
 
     response_outline = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=conversation_outline,
         max_tokens=1024,
         temperature=0.2
     )
 
     essay_outline = response_outline['choices'][0]['message']['content']
+    print(essay_outline)
 
       # Step 2: Generate a blog post based on the essay outline
     conversation = [
@@ -108,14 +109,15 @@ for index, row in enumerate(tqdm(rows, desc='Generating blog posts')):
 ]
 
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=conversation,
-        max_tokens=6400,
+        max_tokens=2500,
         temperature=0.2
     )
 
 
     blog_content = response['choices'][0]['message']['content']
+    print(blog_content)
 
     # Generate featured image
     #featured_image = generate_featured_image(meta_title)
